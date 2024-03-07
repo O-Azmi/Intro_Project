@@ -1,0 +1,41 @@
+<nav>
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+  </ul>
+</nav>
+
+<h1>About Page</h1>
+
+<h2>Data sources used: </h2>
+<ul>
+<li>Books CSV file.</li>
+<li>Book Authors CSV.</li>
+<li>Faker.</li>
+</ul>
+
+<h3>What every data source will be used for:</h3>
+<p><strong>Faker </strong> : This data source is used to generate the book names, and publisher names.</p>
+<ul>
+<li>Table name = Books: Columns: book_id, book_name, author_id(FK), book_publisher(FK), genre_id(FK).</li>
+<li>Table name = Publisher: Columns: publisher_id, publisher_name.</li>
+</ul>
+<p><strong>Books Authors CSV </strong> : This data source is used to pull the author names for the books.</p>
+<ul>
+<li>Table = Authors:  Columns: author_id, author name, author_birthdate.</li>
+</ul>
+
+<p><strong>Books CSV</strong> : This data source is used to pull the book genres names.</p>
+<ul>
+<li>Table= Genres: Columns: genre_id, genre_name..</li>
+</ul>
+<p><strong>Book Table and Publisher Table</strong> : Data will be pulled from both these tables and linked using the Publications table as a bridge.</p>
+<ul>
+<li>Table= Publications: publisher_id, book_id.</p>
+</li>
+</ul>
+<h4> How the data is related and integrated: </h4>
+<p>The data that will be pulled from these different sources is related in a way that it is all about books. Data pulled from faker will provide book names and book publishers names. Data pulled from the Book_authors CSV will provide the books with author names. Lastly, the Book CSV file will be used to pull out book genres.</p>
+
+<h3> ERD Diagram of the database: </h3>
+<%= image_tag("Entity.jpg") %>
