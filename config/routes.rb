@@ -12,6 +12,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about', to: 'about#about'
   resources :books
-  resources :authors, only: [:show]
-
+  resources :authors
 end
