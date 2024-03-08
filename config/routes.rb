@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get '/about', to: 'about#about'
   resources :books
   resources :authors
+  resources :genres
 end
