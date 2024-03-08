@@ -2,6 +2,8 @@
   <ul>
     <li><%= link_to 'Home', root_path %></li>
     <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Books', books_path %></li>
+
   </ul>
 </nav>
 
@@ -31,11 +33,11 @@
 </ul>
 <p><strong>Book Table and Publisher Table</strong> : Data will be pulled from both these tables and linked using the Publications table as a bridge.</p>
 <ul>
-<li>Table= Publications: publisher_id, book_id.</p>
+<li>Table= Publications: publisher_id, book_id.
 </li>
 </ul>
 <h4> How the data is related and integrated: </h4>
 <p>The data that will be pulled from these different sources is related in a way that it is all about books. Data pulled from faker will provide book names and book publishers names. Data pulled from the Book_authors CSV will provide the books with author names. Lastly, the Book CSV file will be used to pull out book genres.</p>
 
 <h3> ERD Diagram of the database: </h3>
-<%= image_tag("Entity.jpg") %>
+<%= image_tag("Entity.jpg", alt: "ERD diagram of my books database") %>
