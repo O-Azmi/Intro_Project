@@ -7,6 +7,13 @@
 </nav>
 <h1>All Books</h1>
 
+<%= form_with(url: books_path, method: "get") do |form| %>
+  <%= form.collection_select :author_id, Author.all, :id, :author_name, { include_blank: "Select an author" } %>
+  <%= form.text_field :search, placeholder: "Search for a book by title" %>
+  <%= form.submit "Search" %>
+<% end %>
+
+
 <table>
   <thead>
     <tr>
