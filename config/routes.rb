@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'authors/show'
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -11,4 +12,6 @@ Rails.application.routes.draw do
   root 'home#index'
   get '/about', to: 'about#about'
   resources :books
+  resources :authors, only: [:show]
+
 end

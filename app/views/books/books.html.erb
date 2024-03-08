@@ -20,7 +20,7 @@
     <% @books.each do |book| %>
       <tr>
         <td><%= link_to book.book_name, book_path(book) %></td>
-        <td><%= book.author.author_name %></td>
+        <td><%= link_to book.author.author_name, author_path(book.author) %></td>
         <td>
           <% book.publishers.each do |publisher| %>
             <%= publisher.publisher_name %><br>
