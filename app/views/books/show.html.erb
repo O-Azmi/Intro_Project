@@ -1,0 +1,14 @@
+<h1><%= @book.book_name %></h1>
+
+<p>Book Name: <%= @book.book_name %> </p>
+<p>Author: <%= @book.author.author_name %></p>
+<p>Genre: <%= @book.genre.genre_name %></p>
+
+<% if @book.publishers.present? %>
+  <p>Publishers Names:</p>
+  <ul>
+    <% @book.publishers.each do |publisher| %>
+      <li><%= publisher.publisher_name %></li>
+    <% end %>
+  </ul>
+<% end %>
